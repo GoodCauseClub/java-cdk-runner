@@ -9,7 +9,7 @@ fi
 
 if [ -z "${ACTION_TOKEN}" ]
 then
-  echo "GITHUB_TOKEN environment variable is not set. This should specify the token for the GitHub user." >&2
+  echo "ACTION_TOKEN environment variable is not set. This should specify the token for the GitHub user." >&2
   exit 1
 fi
 
