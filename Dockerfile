@@ -3,7 +3,7 @@ FROM node:latest
 RUN apt update && apt upgrade -y
 
 # Install AWS CDK and CLI
-RUN npm install -g aws-cdk@2.41.0 && apt-get install awscli -y
+RUN npm install -g aws-cdk@latest && apt-get install awscli -y
 
 # Install Git and Bash
 RUN apt-get install git -y && apt-get install bash -y
