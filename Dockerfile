@@ -9,7 +9,7 @@ RUN npm install -g aws-cdk@latest && apt-get install awscli -y
 RUN apt-get install git -y && apt-get install bash -y
 
 # Install Java
-RUN apt-get install openjdk-21-jdk -y && apt-get install maven -y
+RUN apt-get install amazoncorretto:21 -y && apt-get install maven -y
 
 # Install Docker
 # See https://stackoverflow.com/questions/61401626/docker-installation-failed-on-ubuntu-20-04-ltsvmware
