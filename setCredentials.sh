@@ -24,22 +24,22 @@ echo "
                       http://maven.apache.org/xsd/settings-1.0.0.xsd\">
 
   <activeProfiles>
-    <activeProfile>github</activeProfile>
+    <activeProfile>${REPOSITORY_ID}</activeProfile>
   </activeProfiles>
 
   <profiles>
     <profile>
-      <id>github</id>
+      <id>${REPOSITORY_ID}</id>
       <repositories>
         <repository>
           <id>central</id>
           <url>https://repo1.maven.org/maven2</url>
         </repository>
         <repository>
-          <id>github</id>
-          <url>https://maven.pkg.github.com/goodcauseclub/packages</url>
+          <id>${REPOSITORY_ID}</id>
+          <url>${REPOSITORY_URL}</url>
           <snapshots>
-            <enabled>true</enabled>
+            <enabled>${REPOSITORY_SNAPSHOT_ENABLED}</enabled>
           </snapshots>
         </repository>
       </repositories>
@@ -48,7 +48,7 @@ echo "
 
   <servers>
     <server>
-      <id>github</id>
+      <id>${REPOSITORY_ID}</id>
       <username>${GITHUB_ACTOR}</username>
       <password>${ACTION_TOKEN}</password>
     </server>
