@@ -1,7 +1,7 @@
 FROM node:latest
 
 # Install dependencies
-RUN apt-get update && apt-get install -y wget
+RUN apt-get update && apt-get install -y wget gnupg2 software-properties-common
 
 # RUN apt update && apt upgrade -y
 
@@ -10,6 +10,9 @@ RUN npm install -g aws-cdk@latest && apt-get install awscli -y
 
 # Install Git and Bash
 RUN apt-get install git -y && apt-get install bash -y
+
+# Install java-common and other dependencies
+RUN apt-get install -y java-common
 
 # Download and install Amazon Corretto 21
 RUN wget https://corretto.aws/downloads/latest/amazon-corretto-21-x64-linux-jdk.deb && \
