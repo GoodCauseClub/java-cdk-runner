@@ -23,7 +23,6 @@ RUN wget https://corretto.aws/downloads/latest/amazon-corretto-21-x64-linux-jdk.
 RUN apt-get install maven -y
 
 # Install Docker
-# See https://stackoverflow.com/questions/61401626/docker-installation-failed-on-ubuntu-20-04-ltsvmware
 RUN apt-get install -y docker.io
 
 # Add credentials for GitHub repository
