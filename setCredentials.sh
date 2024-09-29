@@ -24,7 +24,7 @@ echo "
                       http://maven.apache.org/xsd/settings-1.0.0.xsd\">
 
   <activeProfiles>
-    <activeProfile>${GITHUB_REPOSITORY_ID}</activeProfile>
+    <activeProfile>${REPOSITORY_ID}</activeProfile>
   </activeProfiles>
 
   <profiles>
@@ -36,10 +36,10 @@ echo "
           <url>https://repo1.maven.org/maven2</url>
         </repository>
         <repository>
-          <id>${GITHUB_REPOSITORY_ID}</id>
-          <url>${GITHUB_REPOSITORY_URL}</url>
+          <id>${REPOSITORY_ID}</id>
+          <url>${REPOSITORY_URL}</url>
           <snapshots>
-            <enabled>${GITHUB_REPOSITORY_SNAPSHOT_ENABLED}</enabled>
+            <enabled>${REPOSITORY_SNAPSHOT_ENABLED}</enabled>
           </snapshots>
         </repository>
       </repositories>
@@ -48,7 +48,7 @@ echo "
 
   <servers>
     <server>
-      <id>${GITHUB_REPOSITORY_ID}</id>
+      <id>${REPOSITORY_ID}</id>
       <username>${GITHUB_ACTOR}</username>
       <password>${ACTION_TOKEN}</password>
     </server>
