@@ -13,13 +13,6 @@ then
   exit 1
 fi
 
-if [ -z "${REPOSITORY_ID}" ]
-then
-  echo "REPOSITORY_ID environment variable is not set. ssssssss." >&2
-  exit 1
-fi
-echo "*********: ${REPOSITORY_ID} " >&2
-
 # Ensure the Maven directory exists. This is normally not created until a Maven command is run, so
 # this can lead to issues: https://stackoverflow.com/a/46983462/5278606
 mkdir -p /root/.m2
